@@ -10,4 +10,11 @@ program
 		console.log(x)
 	})
 
+program
+	.command('clear')
+	.description('clear all tasks')
+	.action(() => {
+		console.log('all tasks have been cleared')
+	})
+
 program.parse()
