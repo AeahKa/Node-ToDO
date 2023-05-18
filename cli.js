@@ -1,4 +1,5 @@
-const { program, Argument } = require('commander')
+const { program } = require('commander')
+const api = require('./index')
 
 program.option('-x, --xxx', 'what the x')
 
@@ -7,7 +8,7 @@ program
 	.description('add a new task')
 	.argument('<string>', 'task to add')
 	.action((x) => {
-		console.log(x)
+		api.add(x)
 	})
 
 program
