@@ -1,10 +1,12 @@
-const program = require('commander')
 const { program } = require('commander')
 
-program.option('--first').option('-s, --separator <char>')
+program.option('-x, --xxx', 'what the x')
+
+program
+	.command('add <taskName>')
+	.description('add a new task')
+	.action(() => {
+		console.log('new task')
+	})
 
 program.parse()
-
-const options = program.opts()
-const limit = options.first ? 1 : undefined
-console.log(program.args[0].split(options.separator, limit))
