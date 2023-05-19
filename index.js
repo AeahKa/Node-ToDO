@@ -9,4 +9,17 @@ module.exports = {
 		// 储存任务到文件
 		await db.write(list)
 	},
+
+	clear: async () => {
+		await db.write([])
+	},
+
+	showAll: async () => {
+		const list = await db.read()
+		list.forEach((task, index) => {
+			console.log(
+				`${task.done ? '[Done]' : '[____]'} ${index + 1} - ${task.title}`
+			)
+		})
+	},
 }
