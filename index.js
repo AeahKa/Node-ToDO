@@ -63,10 +63,15 @@ module.exports = {
 									db.write(list)
 									break
 							}
-							console.log(answer2)
 						})
 				} else if (index === -1) {
-					console.log('新建任务')
+					inquirer.input({ message: 'Enter a task' }).then((answer3) => {
+						list.push({
+							title: answer3,
+							done: false,
+						})
+						db.write(list)
+					})
 				}
 			})
 	},
