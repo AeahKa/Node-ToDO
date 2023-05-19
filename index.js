@@ -21,8 +21,8 @@ module.exports = {
 			.select({
 				message: 'selected',
 				choices: [
-					{ name: 'quit', value: '-2' },
-					{ name: 'add a new task', value: '-1' },
+					{ name: 'Quit', value: '-2' },
+					{ name: 'Add a new task', value: '-1' },
 					...list.map((task, index) => {
 						return {
 							name: `${task.done ? '[Done]' : '[____]'} ${index + 1} - ${
@@ -35,8 +35,30 @@ module.exports = {
 			})
 			.then((answer) => {
 				const index = parseInt(answer)
-				console.log('选择了一个任务')
 				if (index >= 0) {
+					inquirer
+						.select({
+							message: 'selected',
+							choices: [
+								{ name: 'Quit', value: 'quit' },
+								{ name: 'Done', value: 'done' },
+								{ name: 'Undone', valUe: 'undone' },
+								{ name: 'Remove', value: 'remove' },
+							],
+						})
+						.then((answer2) => {
+							switch (answer2) {
+								case 'quit':
+									break
+								case 'done':
+									break
+								case 'undone':
+									break
+								case 'remove':
+									break
+							}
+							console.log(answer2)
+						})
 				} else if (index === -1) {
 					console.log('新建任务')
 				}
