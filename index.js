@@ -51,10 +51,16 @@ module.exports = {
 								case 'quit':
 									break
 								case 'done':
+									list[index].done = true
+									db.write(list)
 									break
 								case 'undone':
+									list[index].done = false
+									db.write(list)
 									break
 								case 'remove':
+									list.splice(index, 1)
+									db.write(list)
 									break
 							}
 							console.log(answer2)
