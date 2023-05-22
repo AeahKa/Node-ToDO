@@ -1,12 +1,12 @@
 {
-	"name": "todo",
+	"name": "todo-by-aeah",
 	"bin": {
-		"t": "cli.js"
+		"task": "cli.js"
 	},
 	"files": [
 		"*.js"
 	],
-	"version": "0.0.1",
+	"version": "0.0.4",
 	"main": "index.js",
 	"license": "MIT",
 	"dependencies": {
