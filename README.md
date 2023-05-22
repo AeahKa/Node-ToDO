@@ -12,6 +12,7 @@ npm install todo-by-aeah
 task all // 查看所有任务
 ```
 进入任务二级菜单后可选择进行操作
+
 ![Snipaste_2023-05-22_19-46-48](https://github.com/AeahKa/Node-ToDO/assets/106063134/dde76f63-7a52-4d7a-9da2-2ee9270eba07)
 
 ![Snipaste_2023-05-22_19-47-05](https://github.com/AeahKa/Node-ToDO/assets/106063134/9f6374ed-ce31-4927-9156-0f4e379b6043)
