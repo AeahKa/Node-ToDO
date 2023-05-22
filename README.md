@@ -1,5 +1,5 @@
 # Node-ToDO
-一个列表式的待办事项小工具
+一个使用Node.js制作的列表式待办事项小工具
 ![Snipaste_2023-05-22_19-42-00](https://github.com/AeahKa/Node-ToDO/assets/106063134/0f9822c6-61d4-46e4-b288-aa935db907cc)
 ## 安装
 ```
